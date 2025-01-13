@@ -1,0 +1,195 @@
+/*general*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    width: 100%;
+    margin: auto;
+}
+
+.section-title{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.bord{
+    border: 1px black solid;
+    border-radius: 8px;
+    min-height: 100px;
+    
+}
+
+.button{
+    height: 35px;
+    width: 150px;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-1{
+    color: white;
+    background-color: rgb(13, 182, 238);
+}
+
+.btn-1:hover{
+    background-color: orange;
+}
+
+.btn-2{
+    color: #333;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/*header*/
+nav{
+    padding: 0 100px;
+    color: #333;
+}
+.ul-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li-nav{
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+
+.nav-link{
+    text-decoration: none;
+    color:  black; 
+    margin-right: 10px;
+}
+
+.nav-link:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+/*banner*/
+#banner{
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+
+.img-banner{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    min-height: 300px;
+    min-width: 300px;
+    object-fit: cover;
+}
+
+.left, .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.right{
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+/*about*/
+.about-container{
+    width: 100vw;
+    margin: 0px;
+}
+
+
+
+.img-about{
+    height: 300px;
+    width: 320px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-container{
+    margin: auto;
+   
+}
+
+.about-reward{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+
+.top, .bottom{
+    margin: auto;
+}
+
+.about-me{
+    text-align: left;
+    
+}
+/*experiences*/
+.tools{
+    border: 1px rgb(13, 182, 238) solid;
+    max-width: 520px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-tools{
+    text-align: left;
+    
+    min-width: 200px;
+}
+
+.star{
+    font-size: 10px;
+    margin-right: 10px;
+    color: orange;
+}
+/*project*/
+
+/*contact*/
+
+
+/*responsive*/
+
+@media screen and (max-width:600px){
+    .ul-nav{
+        display: none;
+    }
+
+    nav{
+        text-align: center;
+    }
+}
