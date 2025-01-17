@@ -23,7 +23,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
-    <button class="gradient-btn">Contact Me</button>
+    <button class="gradient-btn" onclick="window.location.href='tel:+243995489514'">Contact Me</button>
    </header>
     
    <!--HOME-->
@@ -37,22 +37,22 @@
         <p>"Passionate web developer dedicated to creating dynamic and responsive websites that provide exceptional user experiences."</p>
 
         <div class="social-icons">
-            <a href="#">
+            <a href="https://github.com/mulengaisraelesis" target="_blank">
                 <i class="bx bxl-github"></i>
             </a>
-            <a href="#">
+           <!-- <a href="#">
                 <i class="bx bxl-linkedin"></i>
-            </a>
-            <a href="#">
+            </a> -->
+            <a href="https://www.instagram.com/israelmulenga5825/" target="_blanks">
                 <i class="bx bxl-instagram"></i>
             </a>
-            <a href="">
+            <a href="https://wa.me/243995489514" target="_blank">
                 <i class="bx bxl-whatsapp"></i>
             </a>
         </div>
 
         <div class="btn-group">
-            <a href="#" class="btn">Hire</a>
+            <!--<a href="#" class="btn">Hire</a>-->
             <a href="#contact" class="btn">Contact</a>
         </div>
     </div>
@@ -72,7 +72,8 @@
     <div class="about-content">
         <h2>About <span>Me</span></h2>
         <p>As a passionate web developer, I've honed my skills in HTML, CSS, JavaScript, Python, and Django through courses on Udemy and freeCodeCamp. These technologies enable me to create dynamic, engaging, and responsive web experiences, blending both front-end and back-end development to deliver exceptional user experiences and powerful online presences for businesses.</p>
-        <a href="#" class="btn">read more</a>
+        <br><br>
+        <button class="gradient-btn" onclick="window.location.href='tel:+243995489514'">Contact Me</button>
     </div>
    </section>
 
@@ -86,7 +87,9 @@
             <div class="service-info">
                 <i class="bx bx-code"></i>
                 <h4>Frontend Development</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, excepturi natus rem nisi sed saepe, fugit ipsum a reiciendis, hic reprehenderit. Tenetur culpa distinctio ratione? Eveniet deleniti accusantium asperiores?</p>
+                <p>Experience seamless and engaging web interfaces with our expert frontend development. Fast, responsive, and user-friendly designs that bring your vision to life. Your success starts here.</p>
+                <br>
+                <p>My Tools:</p>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -100,7 +103,9 @@
             <div class="service-info">
                 <i class="bx bx-code-curly"></i>
                 <h4>Backend Development</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, excepturi natus rem nisi sed saepe, fugit ipsum a reiciendis, hic reprehenderit. Tenetur culpa distinctio ratione? Eveniet deleniti accusantium asperiores?</p>
+                <p>Power your applications with our robust backend development services. Secure, scalable, and efficient solutions that ensure seamless performance. Your vision, our expertise.             </p>
+                <br>
+                <p>My Tools:</p>
                 <ul>
                     <li>python (django)</li>
                     <li>Postgres Database</li>
@@ -120,7 +125,7 @@
         <div class="project-card">
             <img src="assets/netflixclone.png" alt="">
             <h3>Netflix Clone</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, excepturi natus rem nisi sed saepe, fugit ipsum a reiciendis, hic reprehenderit. Tenetur culpa distinctio ratione? Eveniet deleniti accusantium asperiores?</p>
+            <p>Replicate the experience of the official Netflix site to effectively demonstrate and implement the diverse skills I have accumulated</p>
             <div class="btn-group">
                 <a href="https://mulengaisraelesis.github.io/cloneNetflix/" target="_blank" class="btn">View Project</a>
                 <a href="https://github.com/mulengaisraelesis/cloneNetflix.git" target="_blank" class="btn">View on github</a>
@@ -130,7 +135,7 @@
         <div class="project-card">
             <img src="assets/hzone.png" alt="">
             <h3>HZONE</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, excepturi natus rem nisi sed saepe, fugit ipsum a reiciendis, hic reprehenderit. Tenetur culpa distinctio ratione? Eveniet deleniti accusantium asperiores?</p>
+            <p>Showcase and highlight a real estate service to facilitate the sale and purchase of properties.</p>
             <div class="btn-group">
                 <a href="https://hzone-mulengaisraelesis-projects.vercel.app/" target="_blank" class="btn">View Project</a>
                 <a href="https://github.com/mulengaisraelesis/HZONE.git" target="_blank" class="btn">View on github</a>
@@ -140,7 +145,7 @@
         <div class="project-card">
             <img src="assets/chapeauchic.png" alt="">
             <h3>ChapeauChic</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, excepturi natus rem nisi sed saepe, fugit ipsum a reiciendis, hic reprehenderit. Tenetur culpa distinctio ratione? Eveniet deleniti accusantium asperiores?</p>
+            <p>Home page of an e-commerce website for hats with the ability to view product details and add to cart</p>
             <div class="btn-group">
                 <a href="https://chapeauchic.vercel.app/" target="_blank" class="btn">View Project</a>
                 <a href="https://github.com/mulengaisraelesis/chapeauchic.git" target="_blank" class="btn">View on github</a>
@@ -153,36 +158,38 @@
    <section id="contact" class="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form action="#" class="contact-form">
+    <form action="#" class="contact-form" id="contactForm">
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <inpur type="email" placeholder="Email" required>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Phone Number" required>
-                <input type="text" placeholder="Subject" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Subject" required>
             <div class="input-box"></div>
         </div>
         <div class="input-group">
-            <textarea placeholder="Your Message" required></textarea>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send" class="btn">
         </div>
     </form>
+    <br>
+    <p id="result"></p>
    </section>
 
    <footer class="footer">
     <div class="social-icons">
-        <a href="#">
+        <a href="https://github.com/mulengaisraelesis" target="_blank">
             <i class="bx bxl-github"></i>
         </a>
-        <a href="#">
+       <!-- <a href="#">
             <i class="bx bxl-linkedin"></i>
-        </a>
-        <a href="#">
+        </a> -->
+        <a href="https://www.instagram.com/israelmulenga5825/" target="_blanks">
             <i class="bx bxl-instagram"></i>
         </a>
-        <a href="">
+        <a href="https://wa.me/243995489514" target="_blank">
             <i class="bx bxl-whatsapp"></i>
         </a>
     </div>
@@ -199,5 +206,6 @@
     </p>
    </footer>
     <script src="scripts.js"></script>
+    <script src="mail.js"></script>
 </body>
 </html>
