@@ -19,9 +19,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     emailjs.sendForm(serviceID, templateID, form)
         .then((response) => {
             console.log("Email sent successfully:", response.status, response.text);
-            alert('Email envoyé avec succès!');
+            alert('Email sent successfully!');
         }, (error) => {
             console.log("Failed to send email:", error);
-            alert('Échec de l\'envoi de l\'email.');
+            alert("Failde to send email, please try later or use social media to contact me.");
         });
 });
