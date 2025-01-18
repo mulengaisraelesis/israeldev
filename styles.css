@@ -572,5 +572,12 @@ ul>li{
         text-wrap: nowrap;
     }
 
+    .services{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     
 }

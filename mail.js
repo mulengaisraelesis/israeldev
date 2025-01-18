@@ -1,18 +1,27 @@
-// Initialisez EmailJS avec votre Public Key
+
 (function(){
-    emailjs.init("2W5V1TCu3Nr8NyHHQ"); // Remplacez par votre Public Key EmailJS
-})();
+    emailjs.init("F7Oj1TjTsgafCbwWV");
+    console.log("EmailJS initialized");
+});
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    console.log("Form submitted");
 
-    const serviceID = 'service_ny8sjqn'; // Remplacez par votre ID de service EmailJS
-    const templateID = 'template_8y4iirm'; // Remplacez par votre ID de modèle EmailJS
-
-    emailjs.sendForm(serviceID, templateID, this)
+    const serviceID = 'service_ny8sjqn';
+    const templateID = 'template_2tov0yw';
+    const form = document.getElementById('contactForm');
+    
+    console.log("Service ID:", serviceID);
+    console.log("Template ID:", templateID);
+    console.log("Form Data:", new FormData(form));
+    
+    emailjs.sendForm(serviceID, templateID, form)
         .then((response) => {
-            document.getElementById('result').textContent = 'Email envoyé avec succès!';
+            console.log("Email sent successfully:", response.status, response.text);
+            alert('Email envoyé avec succès!');
         }, (error) => {
-            document.getElementById('result').textContent = 'Échec de l\'envoi de l\'email.';
+            console.log("Failed to send email:", error);
+            alert('Échec de l\'envoi de l\'email.');
         });
 });
