@@ -1,212 +1,515 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>israeldev</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/icon.png">
-</head>
-<body>
-    <!--HEADER-->
-   <header class="header">
-    <a href="" class="logo">
-        Isra<span>Dev</span>
-    </a>
-    <i class="bx bx-menu" id="menu-icon"></i>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Isra&euml;l Mulenga | D&eacute;veloppeur Odoo &amp; Backend Python RDC
+    </title>
+    <meta
+      name="description"
+      content="Expert en solutions ERP Odoo et developpement Backend Python base a Lubumbashi"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Israel Mulenga" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="israeldev" />
+    <meta
+      property="og:title"
+      content="Isra&euml;l Mulenga | D&eacute;veloppeur Odoo &amp; Backend Python RDC"
+    />
+    <meta
+      property="og:description"
+      content="Expert en solutions ERP Odoo et developpement Backend Python base a Lubumbashi"
+    />
+    <meta property="og:image" content="assets/profile3.jpeg" />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              terminal: {
+                bg: "#080808",
+                panel: "#121212",
+                emerald: "#10b981",
+                amber: "#f59e0b",
+                line: "#1f1f1f",
+              },
+            },
+            fontFamily: {
+              mono: [
+                "JetBrains Mono",
+                "Fira Code",
+                "ui-monospace",
+                "monospace",
+              ],
+            },
+            boxShadow: {
+              glow: "0 0 28px rgba(16,185,129,0.22)",
+              amber: "0 0 28px rgba(245,158,11,0.24)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-terminal-bg text-zinc-200 font-mono antialiased selection:bg-terminal-emerald/30 selection:text-terminal-emerald"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(16,185,129,0.12),transparent_40%),radial-gradient(circle_at_90%_10%,rgba(245,158,11,0.10),transparent_28%)]"
+    ></div>
+    <div class="pointer-events-none fixed inset-0 scanlines opacity-30"></div>
 
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <button class="gradient-btn" onclick="window.location.href='tel:+243995489514'">Contact Me</button>
-   </header>
-    
-   <!--HOME-->
-   <section id="home" class="home">
-    <div class="home-content">
+    <header
+      class="sticky top-0 z-50 border-b border-terminal-line/80 bg-terminal-bg/90 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8"
+      >
+        <a
+          href="#home"
+          class="text-sm font-bold uppercase tracking-[0.18em] text-terminal-emerald"
+          >israeldev.console</a
+        >
+        <button
+          id="menuButton"
+          class="rounded border border-terminal-line px-3 py-2 text-xs uppercase tracking-widest text-zinc-300 md:hidden"
+          aria-label="Ouvrir le menu"
+        >
+          Menu
+        </button>
+        <nav
+          id="mainNav"
+          class="hidden items-center gap-6 text-xs uppercase tracking-[0.16em] text-zinc-400 md:flex"
+        >
+          <a class="hover:text-terminal-emerald transition" href="#home"
+            >Hero</a
+          >
+          <a class="hover:text-terminal-emerald transition" href="#competences"
+            >Competences</a
+          >
+          <a class="hover:text-terminal-emerald transition" href="#projects"
+            >Projets</a
+          >
+          <a class="hover:text-terminal-emerald transition" href="#contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+      <nav
+        id="mobileNav"
+        class="hidden border-t border-terminal-line bg-terminal-panel px-5 py-4 md:hidden"
+      >
+        <a
+          class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
+          href="#home"
+          >Hero</a
+        >
+        <a
+          class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
+          href="#competences"
+          >Competences</a
+        >
+        <a
+          class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
+          href="#projects"
+          >Projets</a
+        >
+        <a
+          class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
+          href="#contact"
+          >Contact</a
+        >
+      </nav>
+    </header>
 
-        <h1>Hi, It's <span>Israel</span></h1>
-        <h3>
-            I'm  a <span>Web Developper</span>
-        </h3>
-        <p>"Passionate web developer dedicated to creating dynamic and responsive websites that provide exceptional user experiences."</p>
+    <main class="relative z-10">
+      <section
+        id="home"
+        class="mx-auto grid min-h-[calc(100vh-80px)] max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.3fr_0.7fr] md:px-8"
+      >
+        <div class="reveal">
+          <p
+            class="mb-5 inline-flex items-center gap-2 rounded border border-terminal-line bg-terminal-panel px-3 py-1 text-xs uppercase tracking-[0.15em] text-zinc-400"
+          >
+            <span
+              class="inline-block h-2 w-2 rounded-full bg-terminal-emerald"
+            ></span>
+            AVAILABLE FOR ERP MISSIONS
+          </p>
+          <h1
+            class="text-3xl font-extrabold leading-tight text-zinc-100 sm:text-4xl md:text-5xl"
+          >
+            <span class="text-terminal-emerald terminal-cursor"
+              >Israel Mulenga</span
+            >
+            <br />
+            Expert Odoo &amp; Backend Developer
+          </h1>
+          <p
+            class="mt-6 max-w-2xl border-l-2 border-terminal-emerald/70 pl-4 text-sm leading-7 text-zinc-300 sm:text-base"
+          >
+            Actuellement en poste chez
+            <span class="font-semibold text-terminal-amber">bvortex</span>, je
+            concois et industrialise des solutions ERP Odoo robustes avec un
+            focus metier, performance backend et fiabilite en production.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="https://wa.me/243851208563"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded border border-terminal-emerald bg-terminal-emerald/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-terminal-emerald transition hover:-translate-y-0.5 hover:shadow-glow"
+              >WhatsApp Direct</a
+            >
+            <a
+              href="https://github.com/mulengaisraelesis"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded border border-terminal-amber bg-terminal-amber/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-terminal-amber transition hover:-translate-y-0.5 hover:shadow-amber"
+              >GitHub</a
+            >
+            <a
+              href="#contact"
+              class="rounded border border-terminal-line bg-terminal-panel px-5 py-3 text-xs font-semibold uppercase tracking-widest text-zinc-300 transition hover:border-terminal-emerald hover:text-terminal-emerald"
+              >Demarrer une mission</a
+            >
+          </div>
+        </div>
+        <div
+          class="reveal-delay rounded-xl border border-terminal-line bg-terminal-panel p-5 shadow-glow"
+        >
+          <img
+            src="assets/profile3.jpeg"
+            alt="Portrait d'Israel Mulenga"
+            class="h-[280px] w-full rounded-lg object-cover md:h-[360px]"
+          />
+        </div>
+      </section>
 
-        <div class="social-icons">
-            <a href="https://github.com/mulengaisraelesis" target="_blank">
-                <i class="bx bxl-github"></i>
-            </a>
-           <!-- <a href="#">
-                <i class="bx bxl-linkedin"></i>
-            </a> -->
-            <a href="https://www.instagram.com/israelmulenga5825/" target="_blanks">
-                <i class="bx bxl-instagram"></i>
-            </a>
-            <a href="https://wa.me/243995489514" target="_blank">
-                <i class="bx bxl-whatsapp"></i>
-            </a>
+      <section id="competences" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+        <div class="mb-10">
+          <p class="text-xs uppercase tracking-[0.16em] text-terminal-emerald">
+            Expertise ERP
+          </p>
+          <h2
+            class="mt-3 text-2xl font-bold text-zinc-100 sm:text-3xl terminal-cursor"
+          >
+            Developpeur Odoo Lubumbashi | Freelance Python RDC
+          </h2>
+          <h3 class="mt-3 text-sm uppercase tracking-[0.14em] text-zinc-400">
+            Competences backend, expertise ERP et execution projet orientee
+            resultat
+          </h3>
         </div>
 
-        <div class="btn-group">
-            <!--<a href="#" class="btn">Hire</a>-->
-            <a href="#contact" class="btn">Contact</a>
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="terminal-card reveal p-5">
+            <h3
+              class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+            >
+              ERP &amp; Frameworks
+            </h3>
+            <ul class="space-y-2 text-sm leading-7 text-zinc-300">
+              <li class="tech-item">
+                <i class="devicon-odoo-plain tech-icon"></i>Odoo (14, 17, 18)
+              </li>
+              <li class="tech-item">
+                <i class="devicon-django-plain tech-icon"></i>Django
+              </li>
+              <li class="tech-item">
+                <i class="devicon-django-plain tech-icon"></i>Django REST
+                Framework
+              </li>
+              <li class="tech-item">
+                <i class="devicon-tailwindcss-plain tech-icon"></i>Tailwind CSS
+              </li>
+            </ul>
+          </article>
+          <article class="terminal-card reveal-delay p-5">
+            <h3
+              class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+            >
+              Langages
+            </h3>
+            <ul class="space-y-2 text-sm leading-7 text-zinc-300">
+              <li class="tech-item">
+                <i class="devicon-python-plain tech-icon"></i>Python (Avance)
+              </li>
+              <li class="tech-item">
+                <i class="devicon-javascript-plain tech-icon"></i>JavaScript
+              </li>
+              <li class="tech-item">
+                <i class="devicon-java-plain tech-icon"></i>Java
+              </li>
+              <li class="tech-item">
+                <i class="devicon-php-plain tech-icon"></i>PHP
+              </li>
+            </ul>
+          </article>
+          <article class="terminal-card reveal-delay-2 p-5">
+            <h3
+              class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+            >
+              Databases &amp; DevOps
+            </h3>
+            <ul class="space-y-2 text-sm leading-7 text-zinc-300">
+              <li class="tech-item">
+                <i class="devicon-postgresql-plain tech-icon"></i>PostgreSQL
+              </li>
+              <li class="tech-item">
+                <i class="devicon-mysql-plain tech-icon"></i>MySQL
+              </li>
+              <li class="tech-item">
+                <i class="devicon-ubuntu-plain tech-icon"></i>Linux Ubuntu
+              </li>
+              <li class="tech-item">
+                <i class="devicon-git-plain tech-icon"></i>Git / GitHub
+              </li>
+              <li class="tech-item">
+                <i class="devicon-linux-plain tech-icon"></i>Deploiement LWS
+              </li>
+            </ul>
+          </article>
+          <article class="terminal-card reveal-delay-2 p-5">
+            <h3
+              class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+            >
+              Soft Skills &amp; Langues
+            </h3>
+            <ul class="space-y-2 text-sm leading-7 text-zinc-300">
+              <li>Leadership de communaute (Lead GDGOC)</li>
+              <li>Gestion de projet</li>
+              <li>Anglais (B2 - Technique)</li>
+              <li>Francais (Courant)</li>
+            </ul>
+          </article>
         </div>
-    </div>
+      </section>
 
-    <div class="home-img">
-        <img src="assets/profile3.jpeg" alt="">
-    </div>
-   </section>
+      <section id="projects" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+        <div class="mb-10">
+          <p class="text-xs uppercase tracking-[0.16em] text-terminal-amber">
+            Projets Prioritaires
+          </p>
+          <h2 class="mt-3 text-2xl font-bold text-zinc-100 sm:text-3xl">
+            Selection orientee impact metier et execution technique
+          </h2>
+        </div>
 
-   <!--ABOUT-->
-   <section class="about" id="about">
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="terminal-card p-5 reveal">
+            <h3 class="text-lg font-bold text-terminal-emerald">Bpay</h3>
+            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
+              Projet bvortex
+            </p>
+            <p class="mt-4 text-sm leading-7 text-zinc-300">
+              Gestionnaire de paiement Mobile Money integre a Odoo avec
+              synchronisation des transactions, validation des etats de paiement
+              et tracabilite comptable.
+            </p>
+          </article>
 
-    <div class="about-img">
-        <img src="assets/profile4.jpg" alt="">
-    </div>
+          <article class="terminal-card p-5 reveal-delay">
+            <h3 class="text-lg font-bold text-terminal-emerald">APSchool</h3>
+            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
+              Freelance
+            </p>
+            <p class="mt-4 text-sm leading-7 text-zinc-300">
+              Systeme complet de gestion scolaire sous Odoo: inscriptions, frais
+              academiques, suivi pedagogique, reporting administratif et
+              automatisations metier.
+            </p>
+          </article>
 
-    <div class="about-content">
-        <h2>About <span>Me</span></h2>
-        <p>As a passionate web developer, I've honed my skills in HTML, CSS, JavaScript, Python, and Django through courses on Udemy and freeCodeCamp. These technologies enable me to create dynamic, engaging, and responsive web experiences, blending both front-end and back-end development to deliver exceptional user experiences and powerful online presences for businesses.</p>
-        <br><br>
-        <button class="gradient-btn" onclick="window.location.href='tel:+243995489514'">Contact Me</button>
-    </div>
-   </section>
+          <article class="terminal-card p-5 reveal-delay-2">
+            <h3 class="text-lg font-bold text-terminal-emerald">HZONE</h3>
+            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
+              Plateforme Django
+            </p>
+            <p class="mt-4 text-sm leading-7 text-zinc-300">
+              Plateforme immobiliere en Django avec messagerie temps reel,
+              gestion des annonces, espace utilisateur et API pour
+              synchronisation front/back.
+            </p>
+          </article>
 
-   <!--SERVICES-->
-   <section id="services" class="services">
-    <h2 class="heading">Services</h2>
+          <article class="terminal-card p-5 reveal-delay-2">
+            <h3 class="text-lg font-bold text-terminal-emerald">VeriPay</h3>
+            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
+              Hackathon Softday
+            </p>
+            <p class="mt-4 text-sm leading-7 text-zinc-300">
+              Interface de verification de frais academiques avec controle de
+              reference, statut de validation instantane et reduction des
+              erreurs de traitement.
+            </p>
+          </article>
+        </div>
+      </section>
 
-
-    <div class="services-container">
-        <div class="service-box">
-            <div class="service-info">
-                <i class="bx bx-code"></i>
-                <h4>Frontend Development</h4>
-                <p>Experience seamless and engaging web interfaces with our expert frontend development. Fast, responsive, and user-friendly designs that bring your vision to life. Your success starts here.</p>
-                <br>
-                <p>My Tools:</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Bootstrap</li>
-                </ul>
+      <section id="contact" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <aside class="terminal-card p-5 reveal">
+            <p class="text-xs uppercase tracking-[0.16em] text-terminal-amber">
+              Contact Fonctionnel
+            </p>
+            <h2 class="mt-3 text-2xl font-bold text-zinc-100">
+              Parlons de votre projet ERP
+            </h2>
+            <p class="mt-5 text-sm leading-7 text-zinc-300">
+              Le formulaire envoie les demandes via EmailJS vers
+              <span class="text-terminal-emerald">mulengansembe@gmail.com</span
+              >.
+            </p>
+            <div
+              class="mt-6 space-y-3 text-xs uppercase tracking-[0.14em] text-zinc-500"
+            >
+              <p>Public Key: F7Oj1TjTsgafCbwWV</p>
+              <p>WhatsApp: +243 851 208 563</p>
             </div>
-        </div>
+          </aside>
 
-        <div class="service-box">
-            <div class="service-info">
-                <i class="bx bx-code-curly"></i>
-                <h4>Backend Development</h4>
-                <p>Power your applications with our robust backend development services. Secure, scalable, and efficient solutions that ensure seamless performance. Your vision, our expertise.             </p>
-                <br>
-                <p>My Tools:</p>
-                <ul>
-                    <li>python (django)</li>
-                    <li>Postgres Database</li>
-                    <li>SQLite Database</li>
-                </ul>
+          <div class="terminal-card p-5 reveal-delay">
+            <form id="contactForm" class="space-y-4" novalidate>
+              <input
+                type="hidden"
+                name="to_email"
+                value="mulengansembe@gmail.com"
+              />
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label
+                  class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
+                >
+                  Nom
+                  <input
+                    class="terminal-input mt-2"
+                    type="text"
+                    name="name"
+                    required
+                  />
+                </label>
+                <label
+                  class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
+                >
+                  Email
+                  <input
+                    class="terminal-input mt-2"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label
+                  class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
+                >
+                  Telephone
+                  <input
+                    class="terminal-input mt-2"
+                    type="text"
+                    name="phone"
+                    required
+                  />
+                </label>
+                <label
+                  class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
+                >
+                  Sujet
+                  <input
+                    class="terminal-input mt-2"
+                    type="text"
+                    name="subject"
+                    required
+                  />
+                </label>
+              </div>
+              <label
+                class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
+              >
+                Message
+                <textarea
+                  class="terminal-input mt-2 min-h-[140px]"
+                  name="message"
+                  required
+                ></textarea>
+              </label>
+              <div class="flex flex-wrap gap-3 pt-2">
+                <button
+                  id="submitButton"
+                  type="submit"
+                  class="rounded border border-terminal-emerald bg-terminal-emerald/10 px-5 py-3 text-xs font-bold uppercase tracking-widest text-terminal-emerald transition hover:shadow-glow"
+                >
+                  Envoyer
+                </button>
+                <a
+                  href="https://wa.me/243851208563"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="rounded border border-terminal-line bg-terminal-panel px-5 py-3 text-xs font-bold uppercase tracking-widest text-zinc-300 transition hover:border-terminal-amber hover:text-terminal-amber"
+                  >WhatsApp</a
+                >
+              </div>
+            </form>
+
+            <div
+              id="consoleStatus"
+              class="mt-6 rounded border border-terminal-line bg-[#0b0b0b] p-4 text-xs leading-6 text-zinc-400"
+              aria-live="polite"
+            >
+              <p class="text-terminal-emerald">
+                $ system ready - waiting for your message...
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-   </section>
+      </section>
+    </main>
 
-   <!--PROJECTS-->
-   <section id="projects" class="projects">
-
-    <h2 class="heading">Projects</h2>
-
-    <div class="projects-box">
-        <div class="project-card">
-            <img src="assets/netflixclone.png" alt="">
-            <h3>Netflix Clone</h3>
-            <p>Replicate the experience of the official Netflix site to effectively demonstrate and implement the diverse skills I have accumulated</p>
-            <div class="btn-group">
-                <!--<a href="https://mulengaisraelesis.github.io/cloneNetflix/" target="_blank" class="btn">View Project</a>-->
-                <a href="https://clone-netflix-alpha-sandy.vercel.app/" target="_blank" class="btn">View on github</a>
-            </div>
+    <footer class="relative z-10 border-t border-terminal-line py-6">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 text-xs uppercase tracking-[0.14em] text-zinc-500 md:flex-row md:items-center md:px-8"
+      >
+        <p>
+          &copy; <span id="year"></span> Israel Mulenga. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="https://github.com/mulengaisraelesis"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="https://wa.me/243851208563"
+            target="_blank"
+            rel="noreferrer"
+            >WhatsApp</a
+          >
         </div>
+      </div>
+    </footer>
 
-        <div class="project-card">
-            <img src="assets/hzone.png" alt="">
-            <h3>HZONE</h3>
-            <p>Showcase and highlight a real estate service to facilitate the sale and purchase of properties.</p>
-            <div class="btn-group">
-                <a href="https://hzone-mulengaisraelesis-projects.vercel.app/" target="_blank" class="btn">View Project</a>
-                <a href="https://github.com/mulengaisraelesis/HZONE.git" target="_blank" class="btn">View on github</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img src="assets/chapeauchic.png" alt="">
-            <h3>ChapeauChic</h3>
-            <p>Home page of an e-commerce website for hats with the ability to view product details and add to cart</p>
-            <div class="btn-group">
-                <a href="https://chapeauchic.vercel.app/" target="_blank" class="btn">View Project</a>
-                <a href="https://github.com/mulengaisraelesis/chapeauchic.git" target="_blank" class="btn">View on github</a>
-            </div>
-        </div>
-    </div>
-   </section>
-
-   <!--CONTACT-->
-   <section id="contact" class="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <form action="#" class="contact-form" id="contactForm">
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="input-box">
-                <input type="text" name="phone" placeholder="Phone Number" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-            <div class="input-box"></div>
-        </div>
-        <div class="input-group">
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send" class="btn">
-        </div>
-    </form>
-    <br>
-    <p id="result"></p>
-   </section>
-
-   <footer class="footer">
-    <div class="social-icons">
-        <a href="https://github.com/mulengaisraelesis" target="_blank">
-            <i class="bx bxl-github"></i>
-        </a>
-       <!-- <a href="#">
-            <i class="bx bxl-linkedin"></i>
-        </a> -->
-        <a href="https://www.instagram.com/israelmulenga5825/" target="_blanks">
-            <i class="bx bxl-instagram"></i>
-        </a>
-        <a href="https://wa.me/243995489514" target="_blank">
-            <i class="bx bxl-whatsapp"></i>
-        </a>
-    </div>
-
-    <ul class="li">
-        <li><a href="FAQ"></a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <p class="copyright">
-        <p>&copy; 2023 IsraelDev. All rights reserved.</p>
-    </p>
-   </footer>
-    <script src="scripts.js"></script>
-    <script src="mail.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scripts.js" defer></script>
+    <script src="mail.js" defer></script>
+  </body>
 </html>
