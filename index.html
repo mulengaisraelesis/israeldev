@@ -1,27 +1,28 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Isra&euml;l Mulenga | D&eacute;veloppeur Odoo &amp; Backend Python RDC
+      Isra&euml;l Mulenga | Odoo &amp; Python Backend Developer (Remote)
     </title>
     <meta
       name="description"
-      content="Expert en solutions ERP Odoo et developpement Backend Python base a Lubumbashi"
+      content="Odoo ERP (v14 to v19) and Python/Django backend developer based in Lubumbashi, DRC. Available immediately for remote and freelance missions."
     />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Israel Mulenga" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
     <meta property="og:site_name" content="israeldev" />
     <meta
       property="og:title"
-      content="Isra&euml;l Mulenga | D&eacute;veloppeur Odoo &amp; Backend Python RDC"
+      content="Isra&euml;l Mulenga | Odoo &amp; Python Backend Developer (Remote)"
     />
     <meta
       property="og:description"
-      content="Expert en solutions ERP Odoo et developpement Backend Python base a Lubumbashi"
+      content="Odoo ERP (v14 to v19) and Python/Django backend developer based in Lubumbashi, DRC. Available immediately for remote and freelance missions."
     />
     <meta property="og:image" content="assets/profile3.jpeg" />
     <link rel="icon" href="assets/icon.png" />
@@ -79,37 +80,83 @@
       class="sticky top-0 z-50 border-b border-terminal-line/80 bg-terminal-bg/90 backdrop-blur"
     >
       <div
-        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8"
+        class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8"
       >
         <a
           href="#home"
           class="text-sm font-bold uppercase tracking-[0.18em] text-terminal-emerald"
           >israeldev.console</a
         >
-        <button
-          id="menuButton"
-          class="rounded border border-terminal-line px-3 py-2 text-xs uppercase tracking-widest text-zinc-300 md:hidden"
-          aria-label="Ouvrir le menu"
-        >
-          Menu
-        </button>
         <nav
           id="mainNav"
           class="hidden items-center gap-6 text-xs uppercase tracking-[0.16em] text-zinc-400 md:flex"
         >
-          <a class="hover:text-terminal-emerald transition" href="#home"
-            >Hero</a
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="#home"
+            data-i18n="nav.home"
+            >Home</a
           >
-          <a class="hover:text-terminal-emerald transition" href="#competences"
-            >Competences</a
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="#competences"
+            data-i18n="nav.skills"
+            >Skills</a
           >
-          <a class="hover:text-terminal-emerald transition" href="#projects"
-            >Projets</a
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="#projects"
+            data-i18n="nav.projects"
+            >Projects</a
           >
-          <a class="hover:text-terminal-emerald transition" href="#contact"
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="#contact"
+            data-i18n="nav.contact"
             >Contact</a
           >
         </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="https://github.com/israel-mulenga"
+            target="_blank"
+            rel="noreferrer"
+            class="header-icon hidden lg:inline-flex"
+            aria-label="GitHub"
+            ><i class="devicon-github-original"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/israel-mulenga/"
+            target="_blank"
+            rel="noreferrer"
+            class="header-icon hidden lg:inline-flex"
+            aria-label="LinkedIn"
+            ><i class="devicon-linkedin-plain"></i
+          ></a>
+          <a
+            href="assets/cv-israel-mulenga.pdf"
+            download
+            class="hidden rounded border border-terminal-amber bg-terminal-amber/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-widest text-terminal-amber transition hover:shadow-amber lg:inline-block"
+            data-i18n="nav.cv"
+            >Download my CV</a
+          >
+          <div class="lang-switch" role="group" aria-label="Language / Langue">
+            <button type="button" data-lang-option="en" aria-pressed="true">
+              EN
+            </button>
+            <button type="button" data-lang-option="fr" aria-pressed="false">
+              FR
+            </button>
+          </div>
+          <button
+            id="menuButton"
+            class="rounded border border-terminal-line px-3 py-2 text-xs uppercase tracking-widest text-zinc-300 md:hidden"
+            aria-label="Open menu"
+            data-i18n-attr="aria-label:nav.menu"
+          >
+            Menu
+          </button>
+        </div>
       </div>
       <nav
         id="mobileNav"
@@ -118,22 +165,33 @@
         <a
           class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
           href="#home"
-          >Hero</a
+          data-i18n="nav.home"
+          >Home</a
         >
         <a
           class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
           href="#competences"
-          >Competences</a
+          data-i18n="nav.skills"
+          >Skills</a
         >
         <a
           class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
           href="#projects"
-          >Projets</a
+          data-i18n="nav.projects"
+          >Projects</a
         >
         <a
           class="block py-2 text-xs uppercase tracking-[0.16em] text-zinc-300"
           href="#contact"
+          data-i18n="nav.contact"
           >Contact</a
+        >
+        <a
+          class="block py-2 text-xs uppercase tracking-[0.16em] text-terminal-amber"
+          href="assets/cv-israel-mulenga.pdf"
+          download
+          data-i18n="nav.cv"
+          >Download my CV</a
         >
       </nav>
     </header>
@@ -145,12 +203,12 @@
       >
         <div class="reveal">
           <p
-            class="mb-5 inline-flex items-center gap-2 rounded border border-terminal-line bg-terminal-panel px-3 py-1 text-xs uppercase tracking-[0.15em] text-zinc-400"
+            class="mb-5 inline-flex items-center gap-2 rounded border border-terminal-emerald/40 bg-terminal-panel px-3 py-1 text-xs uppercase tracking-[0.15em] text-terminal-emerald"
           >
             <span
-              class="inline-block h-2 w-2 rounded-full bg-terminal-emerald"
+              class="inline-block h-2 w-2 animate-pulse rounded-full bg-terminal-emerald"
             ></span>
-            AVAILABLE FOR ERP MISSIONS
+            <span data-i18n="hero.badge">Available immediately — 8h/day</span>
           </p>
           <h1
             class="text-3xl font-extrabold leading-tight text-zinc-100 sm:text-4xl md:text-5xl"
@@ -159,33 +217,52 @@
               >Israel Mulenga</span
             >
             <br />
-            Expert Odoo &amp; Backend Developer
+            <span data-i18n-html="hero.title"
+              >Odoo Expert &amp; Backend Developer</span
+            >
           </h1>
           <p
             class="mt-6 max-w-2xl border-l-2 border-terminal-emerald/70 pl-4 text-sm leading-7 text-zinc-300 sm:text-base"
+            data-i18n="hero.lead"
           >
-            Je concois et industrialise des solutions ERP Odoo robustes avec un
-            focus metier, performance backend et fiabilite en production.
+            I design and ship robust Odoo ERP solutions with a strong business
+            focus, backend performance and production reliability.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="assets/cv-israel-mulenga.pdf"
+              download
+              class="rounded border border-terminal-amber bg-terminal-amber px-5 py-3 text-xs font-bold uppercase tracking-widest text-terminal-bg transition hover:-translate-y-0.5 hover:shadow-amber"
+              data-i18n="hero.cv"
+              >Download my CV</a
+            >
             <a
               href="https://wa.me/243851208563"
               target="_blank"
               rel="noreferrer"
               class="rounded border border-terminal-emerald bg-terminal-emerald/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-terminal-emerald transition hover:-translate-y-0.5 hover:shadow-glow"
+              data-i18n="hero.whatsapp"
               >WhatsApp Direct</a
             >
             <a
-              href="https://github.com/mulengaisraelesis"
+              href="https://github.com/israel-mulenga"
               target="_blank"
               rel="noreferrer"
               class="rounded border border-terminal-amber bg-terminal-amber/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-terminal-amber transition hover:-translate-y-0.5 hover:shadow-amber"
               >GitHub</a
             >
             <a
+              href="https://www.linkedin.com/in/israel-mulenga/"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded border border-terminal-amber bg-terminal-amber/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-terminal-amber transition hover:-translate-y-0.5 hover:shadow-amber"
+              >LinkedIn</a
+            >
+            <a
               href="#contact"
               class="rounded border border-terminal-line bg-terminal-panel px-5 py-3 text-xs font-semibold uppercase tracking-widest text-zinc-300 transition hover:border-terminal-emerald hover:text-terminal-emerald"
-              >Demarrer une mission</a
+              data-i18n="hero.mission"
+              >Start a project</a
             >
           </div>
         </div>
@@ -194,7 +271,8 @@
         >
           <img
             src="assets/profile3.jpeg"
-            alt="Portrait d'Israel Mulenga"
+            alt="Portrait of Israël Mulenga"
+            data-i18n-attr="alt:hero.imgAlt"
             class="h-[280px] w-full rounded-lg object-cover md:h-[360px]"
           />
         </div>
@@ -202,17 +280,23 @@
 
       <section id="competences" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
         <div class="mb-10">
-          <p class="text-xs uppercase tracking-[0.16em] text-terminal-emerald">
-            Expertise ERP
+          <p
+            class="text-xs uppercase tracking-[0.16em] text-terminal-emerald"
+            data-i18n="skills.kicker"
+          >
+            ERP Expertise
           </p>
           <h2
             class="mt-3 text-2xl font-bold text-zinc-100 sm:text-3xl terminal-cursor"
+            data-i18n="skills.title"
           >
-            Developpeur Odoo Lubumbashi | Freelance Python RDC
+            Odoo Developer in Lubumbashi | Remote Python Freelancer
           </h2>
-          <h3 class="mt-3 text-sm uppercase tracking-[0.14em] text-zinc-400">
-            Competences backend, expertise ERP et execution projet orientee
-            resultat
+          <h3
+            class="mt-3 text-sm uppercase tracking-[0.14em] text-zinc-400"
+            data-i18n="skills.subtitle"
+          >
+            Backend skills, ERP expertise and result-driven project delivery
           </h3>
         </div>
 
@@ -220,12 +304,14 @@
           <article class="terminal-card reveal p-5">
             <h3
               class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+              data-i18n-html="skills.erp"
             >
               ERP &amp; Frameworks
             </h3>
             <ul class="space-y-2 text-sm leading-7 text-zinc-300">
               <li class="tech-item">
-                <i class="devicon-odoo-plain tech-icon"></i>Odoo (14, 17, 18)
+                <i class="devicon-odoo-plain tech-icon"></i
+                ><span data-i18n="skills.odoo">Odoo (14 to 19)</span>
               </li>
               <li class="tech-item">
                 <i class="devicon-django-plain tech-icon"></i>Django
@@ -242,18 +328,17 @@
           <article class="terminal-card reveal-delay p-5">
             <h3
               class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+              data-i18n="skills.languages"
             >
-              Langages
+              Languages
             </h3>
             <ul class="space-y-2 text-sm leading-7 text-zinc-300">
               <li class="tech-item">
-                <i class="devicon-python-plain tech-icon"></i>Python (Avance)
+                <i class="devicon-python-plain tech-icon"></i
+                ><span data-i18n="skills.python">Python (Advanced)</span>
               </li>
               <li class="tech-item">
                 <i class="devicon-javascript-plain tech-icon"></i>JavaScript
-              </li>
-              <li class="tech-item">
-                <i class="devicon-java-plain tech-icon"></i>Java
               </li>
               <li class="tech-item">
                 <i class="devicon-php-plain tech-icon"></i>PHP
@@ -263,6 +348,7 @@
           <article class="terminal-card reveal-delay-2 p-5">
             <h3
               class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+              data-i18n-html="skills.db"
             >
               Databases &amp; DevOps
             </h3>
@@ -280,21 +366,25 @@
                 <i class="devicon-git-plain tech-icon"></i>Git / GitHub
               </li>
               <li class="tech-item">
-                <i class="devicon-linux-plain tech-icon"></i>Deploiement LWS
+                <i class="devicon-linux-plain tech-icon"></i
+                ><span data-i18n="skills.deploy">LWS Deployment</span>
               </li>
             </ul>
           </article>
           <article class="terminal-card reveal-delay-2 p-5">
             <h3
               class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-terminal-emerald"
+              data-i18n-html="skills.soft"
             >
-              Soft Skills &amp; Langues
+              Soft Skills &amp; Languages
             </h3>
             <ul class="space-y-2 text-sm leading-7 text-zinc-300">
-              <li>Leadership de communaute (Lead GDGOC)</li>
-              <li>Gestion de projet</li>
-              <li>Anglais (B2 - Technique)</li>
-              <li>Francais (Courant)</li>
+              <li data-i18n="skills.leadership">
+                Community leadership (GDGOC Lead)
+              </li>
+              <li data-i18n="skills.pm">Project management</li>
+              <li data-i18n="skills.english">English (B2 - Technical)</li>
+              <li data-i18n="skills.french">French (Fluent)</li>
             </ul>
           </article>
         </div>
@@ -302,61 +392,181 @@
 
       <section id="projects" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
         <div class="mb-10">
-          <p class="text-xs uppercase tracking-[0.16em] text-terminal-amber">
-            Projets Prioritaires
+          <p
+            class="text-xs uppercase tracking-[0.16em] text-terminal-amber"
+            data-i18n="projects.kicker"
+          >
+            Featured Projects
           </p>
-          <h2 class="mt-3 text-2xl font-bold text-zinc-100 sm:text-3xl">
-            Selection orientee impact metier et execution technique
+          <h2
+            class="mt-3 text-2xl font-bold text-zinc-100 sm:text-3xl"
+            data-i18n="projects.title"
+          >
+            Selected for business impact and technical execution
           </h2>
         </div>
 
         <div class="grid gap-5 md:grid-cols-2">
-          <article class="terminal-card p-5 reveal">
-            <h3 class="text-lg font-bold text-terminal-emerald">Bpay</h3>
-            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
-              Projet bvortex
+          <article class="terminal-card project-card p-5 reveal">
+            <div class="project-visual">
+              <img
+                src="assets/bpay.webp"
+                alt="Bpay home page screenshot"
+                data-i18n-attr="alt:projects.bpay.alt"
+                loading="lazy"
+                width="1024"
+                height="510"
+              />
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-terminal-emerald">Bpay</h3>
+            <p
+              class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500"
+              data-i18n="projects.bpay.tag"
+            >
+              bvortex · Python, Odoo
             </p>
-            <p class="mt-4 text-sm leading-7 text-zinc-300">
-              Gestionnaire de paiement Mobile Money integre a Odoo avec
-              synchronisation des transactions, validation des etats de paiement
-              et tracabilite comptable.
+            <p
+              class="mt-4 text-sm leading-7 text-zinc-300"
+              data-i18n="projects.bpay.desc"
+            >
+              Payroll and salary advance management ecosystem built into Odoo,
+              with secure REST API controllers syncing payments in real time
+              through Mobile Money gateways.
             </p>
+            <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
+              <a
+                href="https://bpay.bvortex.com/"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+                ><span data-i18n="projects.live">Live site</span>
+                <span aria-hidden="true">↗</span></a
+              ><span class="project-badge" data-i18n="projects.private"
+                >Private company code</span
+              >
+            </div>
           </article>
-
-          <article class="terminal-card p-5 reveal-delay">
-            <h3 class="text-lg font-bold text-terminal-emerald">APSchool</h3>
-            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
-              Freelance
+          <article class="terminal-card project-card p-5 reveal-delay">
+            <div class="project-visual">
+              <img
+                src="assets/apschool.webp"
+                alt="APSchool Odoo back-office screenshot"
+                data-i18n-attr="alt:projects.apschool.alt"
+                loading="lazy"
+                width="1024"
+                height="397"
+              />
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-terminal-emerald">
+              APSchool
+            </h3>
+            <p
+              class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500"
+              data-i18n="projects.apschool.tag"
+            >
+              Freelance · Odoo
             </p>
-            <p class="mt-4 text-sm leading-7 text-zinc-300">
-              Systeme complet de gestion scolaire sous Odoo: inscriptions, frais
-              academiques, suivi pedagogique, reporting administratif et
-              automatisations metier.
+            <p
+              class="mt-4 text-sm leading-7 text-zinc-300"
+              data-i18n="projects.apschool.desc"
+            >
+              Custom school management ERP built on Odoo: enrollments, tuition
+              fees, report cards and academic records, deployed to production on
+              LWS with staff training.
             </p>
+            <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
+              <a
+                href="https://apschool.net"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+                ><span data-i18n="projects.live">Live site</span>
+                <span aria-hidden="true">↗</span></a
+              ><span class="project-badge" data-i18n="projects.private"
+                >Private company code</span
+              >
+            </div>
           </article>
-
-          <article class="terminal-card p-5 reveal-delay-2">
-            <h3 class="text-lg font-bold text-terminal-emerald">HZONE</h3>
-            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
-              Plateforme Django
+          <article class="terminal-card project-card p-5 reveal-delay-2">
+            <div class="project-visual">
+              <img
+                src="assets/hzone-listings.webp"
+                alt="HZONE property listings screenshot"
+                data-i18n-attr="alt:projects.hzone.alt"
+                loading="lazy"
+                width="1024"
+                height="466"
+              />
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-terminal-emerald">HZONE</h3>
+            <p
+              class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500"
+              data-i18n="projects.hzone.tag"
+            >
+              Django · Tailwind CSS
             </p>
-            <p class="mt-4 text-sm leading-7 text-zinc-300">
-              Plateforme immobiliere en Django avec messagerie temps reel,
-              gestion des annonces, espace utilisateur et API pour
-              synchronisation front/back.
+            <p
+              class="mt-4 text-sm leading-7 text-zinc-300"
+              data-i18n="projects.hzone.desc"
+            >
+              Full-stack real estate listing and rental platform built with
+              Django, featuring asynchronous real-time messaging between users.
             </p>
+            <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
+              <a
+                href="https://github.com/israel-mulenga/HZONE"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+                ><i
+                  class="devicon-github-original tech-icon"
+                  aria-hidden="true"
+                ></i
+                ><span data-i18n="projects.github">View on GitHub</span>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
           </article>
-
-          <article class="terminal-card p-5 reveal-delay-2">
-            <h3 class="text-lg font-bold text-terminal-emerald">VeriPay</h3>
-            <p class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500">
-              Hackathon Softday
+          <article class="terminal-card project-card p-5 reveal-delay-2">
+            <div class="project-visual">
+              <img
+                src="assets/bongoappafrica.webp"
+                alt="BongoAppAfrica home page screenshot"
+                data-i18n-attr="alt:projects.bongo.alt"
+                loading="lazy"
+                width="1024"
+                height="508"
+              />
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-terminal-emerald">
+              BongoAppAfrica
+            </h3>
+            <p
+              class="mt-2 text-xs uppercase tracking-[0.12em] text-zinc-500"
+              data-i18n="projects.bongo.tag"
+            >
+              Pan-African platform
             </p>
-            <p class="mt-4 text-sm leading-7 text-zinc-300">
-              Interface de verification de frais academiques avec controle de
-              reference, statut de validation instantane et reduction des
-              erreurs de traitement.
+            <p
+              class="mt-4 text-sm leading-7 text-zinc-300"
+              data-i18n="projects.bongo.desc"
+            >
+              Business & events platform for Africa: official public tenders
+              (ARSP, MediaCongo, SIGMAP), event ticketing with QR codes and a
+              creator space to manage events and sales.
             </p>
+            <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
+              <a
+                href="https://www.bongoappafrica.com/"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+                ><span data-i18n="projects.live">Live site</span>
+                <span aria-hidden="true">↗</span></a
+              ><span class="project-badge" data-i18n="projects.private"
+                >Private company code</span
+              >
+            </div>
           </article>
         </div>
       </section>
@@ -364,14 +574,23 @@
       <section id="contact" class="mx-auto max-w-6xl px-5 py-14 md:px-8">
         <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <aside class="terminal-card p-5 reveal">
-            <p class="text-xs uppercase tracking-[0.16em] text-terminal-amber">
-              Contact Fonctionnel
+            <p
+              class="text-xs uppercase tracking-[0.16em] text-terminal-amber"
+              data-i18n="contact.kicker"
+            >
+              Get in touch
             </p>
-            <h2 class="mt-3 text-2xl font-bold text-zinc-100">
-              Parlons de votre projet ERP
+            <h2
+              class="mt-3 text-2xl font-bold text-zinc-100"
+              data-i18n="contact.title"
+            >
+              Let's talk about your ERP project
             </h2>
-            <p class="mt-5 text-sm leading-7 text-zinc-300">
-              Le formulaire envoie les demandes via EmailJS vers
+            <p
+              class="mt-5 text-sm leading-7 text-zinc-300"
+              data-i18n-html="contact.intro"
+            >
+              The form sends your request via EmailJS to
               <span class="text-terminal-emerald">mulengansembe@gmail.com</span
               >.
             </p>
@@ -394,7 +613,7 @@
                 <label
                   class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
                 >
-                  Nom
+                  <span data-i18n="contact.name">Name</span>
                   <input
                     class="terminal-input mt-2"
                     type="text"
@@ -405,7 +624,7 @@
                 <label
                   class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
                 >
-                  Email
+                  <span data-i18n="contact.email">Email</span>
                   <input
                     class="terminal-input mt-2"
                     type="email"
@@ -418,7 +637,7 @@
                 <label
                   class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
                 >
-                  Telephone
+                  <span data-i18n="contact.phone">Phone</span>
                   <input
                     class="terminal-input mt-2"
                     type="text"
@@ -429,7 +648,7 @@
                 <label
                   class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
                 >
-                  Sujet
+                  <span data-i18n="contact.subject">Subject</span>
                   <input
                     class="terminal-input mt-2"
                     type="text"
@@ -441,7 +660,7 @@
               <label
                 class="block text-xs uppercase tracking-[0.14em] text-zinc-400"
               >
-                Message
+                <span data-i18n="contact.message">Message</span>
                 <textarea
                   class="terminal-input mt-2 min-h-[140px]"
                   name="message"
@@ -453,8 +672,9 @@
                   id="submitButton"
                   type="submit"
                   class="rounded border border-terminal-emerald bg-terminal-emerald/10 px-5 py-3 text-xs font-bold uppercase tracking-widest text-terminal-emerald transition hover:shadow-glow"
+                  data-i18n="contact.submit"
                 >
-                  Envoyer
+                  Send
                 </button>
                 <a
                   href="https://wa.me/243851208563"
@@ -471,7 +691,7 @@
               class="mt-6 rounded border border-terminal-line bg-[#0b0b0b] p-4 text-xs leading-6 text-zinc-400"
               aria-live="polite"
             >
-              <p class="text-terminal-emerald">
+              <p class="text-terminal-emerald" data-i18n="contact.ready">
                 $ system ready - waiting for your message...
               </p>
             </div>
@@ -485,15 +705,23 @@
         class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 text-xs uppercase tracking-[0.14em] text-zinc-500 md:flex-row md:items-center md:px-8"
       >
         <p>
-          &copy; <span id="year"></span> Israel Mulenga. All rights reserved.
+          &copy; <span id="year"></span> Israel Mulenga.
+          <span data-i18n="footer.rights">All rights reserved.</span>
         </p>
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-4">
           <a
             class="hover:text-terminal-emerald transition"
-            href="https://github.com/mulengaisraelesis"
+            href="https://github.com/israel-mulenga"
             target="_blank"
             rel="noreferrer"
             >GitHub</a
+          >
+          <a
+            class="hover:text-terminal-emerald transition"
+            href="https://www.linkedin.com/in/israel-mulenga/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
           >
           <a
             class="hover:text-terminal-emerald transition"
@@ -502,11 +730,19 @@
             rel="noreferrer"
             >WhatsApp</a
           >
+          <a
+            class="text-terminal-amber hover:text-terminal-emerald transition"
+            href="assets/cv-israel-mulenga.pdf"
+            download
+            data-i18n="nav.cv"
+            >Download my CV</a
+          >
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="i18n.js" defer></script>
     <script src="scripts.js" defer></script>
     <script src="mail.js" defer></script>
   </body>

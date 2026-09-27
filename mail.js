@@ -6,6 +6,10 @@ const form = document.getElementById("contactForm");
 const submitButton = document.getElementById("submitButton");
 const consoleStatus = document.getElementById("consoleStatus");
 
+function t(key, fallback) {
+  return window.i18n ? window.i18n.t(key) : fallback;
+}
+
 function appendConsoleLog(message, level) {
   if (!consoleStatus) {
     return;
@@ -27,15 +31,18 @@ if (form) {
 
     if (!window.emailjs) {
       appendConsoleLog(
-        "[ERROR] Email service indisponible. Recharge la page.",
+        t("contact.log.unavailable", "[ERROR] Email service unavailable."),
         "error",
       );
       return;
     }
 
     submitButton.disabled = true;
-    submitButton.textContent = "Envoi en cours...";
-    appendConsoleLog("[PENDING] Envoi en cours...", "pending");
+    submitButton.textContent = t("contact.sending", "Sending...");
+    appendConsoleLog(
+      t("contact.log.pending", "[PENDING] Sending..."),
+      "pending",
+    );
 
     try {
       await window.emailjs.sendForm(
@@ -43,17 +50,23 @@ if (form) {
         CONTACT_TEMPLATE_ID,
         form,
       );
-      appendConsoleLog("[SUCCESS] Message envoye avec succes.", "success");
+      appendConsoleLog(
+        t("contact.log.success", "[SUCCESS] Message sent successfully."),
+        "success",
+      );
       form.reset();
     } catch (error) {
       appendConsoleLog(
-        "[ERROR] Echec de l'envoi. Reessaie ou contacte via WhatsApp.",
+        t(
+          "contact.log.error",
+          "[ERROR] Sending failed. Try again or use WhatsApp.",
+        ),
         "error",
       );
       console.error("EmailJS send error:", error);
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = "Envoyer";
+      submitButton.textContent = t("contact.submit", "Send");
     }
   });
 }
